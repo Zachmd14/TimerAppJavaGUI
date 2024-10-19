@@ -26,11 +26,8 @@ public class AppTest
 	}
 
 	/**
-	 * Rigourous Test :-)
+	 * Always true test
 	 */
-	public void testApp() {
-		assertTrue(true);
-	}
 
 	public void testAlwaysTrue() {
 		// This test will always pass because it asserts true
