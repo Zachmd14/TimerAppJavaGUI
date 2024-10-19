@@ -2,16 +2,16 @@ package com.TimerApp.zachary;
 
 import javax.swing.*;
 
-/**
- * Hello world!
- *
- */
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
 
 		JFrame frame = new JFrame();
 		frame.setVisible(true);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+		JLabel testLabel = new JLabel();
+		testLabel.setText("Hello World");
+		frame.add(testLabel);
 
 	}
 }
