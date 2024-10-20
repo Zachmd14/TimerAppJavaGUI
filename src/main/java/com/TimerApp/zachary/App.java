@@ -10,7 +10,7 @@ public class App {
 		Gui gui = new Gui();
 
 		int time = 25;
-		gui.setLabelText(String.valueOf(time - 1));
+		gui.setLabelText(String.valueOf(time));
 
 	}
 }
