@@ -16,6 +16,7 @@ public class Gui {
 
 		// Create an Hello World label
 		TimeLabel = new JLabel("EMPTY TEXT", JLabel.CENTER);
+		TimeLabel.setFont(TimeLabel.getFont().deriveFont(48f));
 
 		// Create the Buttons
 		startButton = new JButton("Start");
