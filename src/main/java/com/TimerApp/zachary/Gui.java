@@ -3,6 +3,8 @@ package com.TimerApp.zachary;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Gui {
 
@@ -15,12 +17,24 @@ public class Gui {
 		JFrame frame = new JFrame("Timer");
 
 		// Create an Hello World label
-		TimeLabel = new JLabel("EMPTY TEXT", JLabel.CENTER);
+		TimeLabel = new JLabel("Timer for 25 sec", JLabel.CENTER);
 		TimeLabel.setFont(TimeLabel.getFont().deriveFont(24f));
 
 		// Create the Buttons
 		startButton = new JButton("Start");
+		startButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				App.startTimer();
+			}
+		});
+
 		stopButton = new JButton("Stop");
+		stopButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				App.timer.stop();
+				setLabelText("Timer stopped");
+			}
+		});
 
 		// Create boders
 		Border GreenBorder = BorderFactory.createLineBorder(Color.GREEN);
