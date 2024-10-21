@@ -2,6 +2,8 @@ package com.TimerApp.zachary;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -58,23 +60,25 @@ public class Gui {
 		Border BlackBorder = BorderFactory.createLineBorder(Color.BLACK);
 
 		// Create buttons panel
-		JPanel ButtonsPanel = new JPanel();
-		ButtonsPanel.setLayout(new FlowLayout());
-		ButtonsPanel.add(startButton);
-		ButtonsPanel.add(stopButton);
+		JPanel buttonsPanel = new JPanel();
+		buttonsPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
+		buttonsPanel.setLayout(new FlowLayout());
+		buttonsPanel.add(startButton);
+		buttonsPanel.add(stopButton);
 
 		// Create the text panel
-		JPanel TextPanel = new JPanel();
-		TextPanel.setLayout(new BorderLayout());
-		TextPanel.add(timeLabel, BorderLayout.CENTER);
-		TextPanel.add(timeInput, BorderLayout.NORTH);
+		JPanel textPanel = new JPanel();
+		textPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
+		textPanel.setLayout(new BorderLayout());
+		textPanel.add(timeLabel, BorderLayout.CENTER);
+		textPanel.add(timeInput, BorderLayout.NORTH);
 		// TextPanel.setBorder(BlackBorder);
 
 		// Create MainPanel
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(new BorderLayout());
-		mainPanel.add(ButtonsPanel, BorderLayout.SOUTH);
-		mainPanel.add(TextPanel, BorderLayout.NORTH);
+		mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
+		mainPanel.add(textPanel, BorderLayout.NORTH);
 
 		// Set the frame
 		frame.add(mainPanel);

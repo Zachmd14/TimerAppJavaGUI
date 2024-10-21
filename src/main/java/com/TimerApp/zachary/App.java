@@ -14,7 +14,7 @@ public class App {
 
 	// Starting timer method
 	public static void startTimer() {
-		timeValue[0] = Integer.parseInt(Gui.timeInput.getText());
+		timeValue[0] = Integer.parseInt(Gui.timeInput.getText()) - 1;
 		gui.setLabelText(String.valueOf(timeValue[0]));
 		timer.start();
 	}
