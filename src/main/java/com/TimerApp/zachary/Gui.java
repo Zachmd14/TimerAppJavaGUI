@@ -13,9 +13,10 @@ import com.formdev.flatlaf.FlatDarkLaf;
 
 public class Gui {
 
-	private JLabel TimeLabel; // Reference to the label
+	private JLabel timeLabel; // Reference to the label
 	private JButton startButton; // Reference to the start button
 	private JButton stopButton; // Reference to the stop button
+	public static JTextField timeInput; // Reference to the time input field
 
 	public Gui() {
 
@@ -29,9 +30,12 @@ public class Gui {
 		// Set the frame
 		JFrame frame = new JFrame("Timer");
 
-		// Create an Hello World label
-		TimeLabel = new JLabel("Timer for 25 sec", JLabel.CENTER);
-		TimeLabel.setFont(TimeLabel.getFont().deriveFont(24f));
+		// Create a label
+		timeLabel = new JLabel("Welcome to the Timer", JLabel.CENTER);
+		timeLabel.setFont(timeLabel.getFont().deriveFont(24f));
+
+		// Create a TextField
+		timeInput = new JTextField("25");
 
 		// Create the Buttons
 		startButton = new JButton("Start");
@@ -62,7 +66,8 @@ public class Gui {
 		// Create the text panel
 		JPanel TextPanel = new JPanel();
 		TextPanel.setLayout(new BorderLayout());
-		TextPanel.add(TimeLabel, BorderLayout.CENTER);
+		TextPanel.add(timeLabel, BorderLayout.CENTER);
+		TextPanel.add(timeInput, BorderLayout.NORTH);
 		// TextPanel.setBorder(BlackBorder);
 
 		// Create MainPanel
@@ -81,7 +86,7 @@ public class Gui {
 	}
 
 	public void setLabelText(String text) {
-		TimeLabel.setText(text);
+		timeLabel.setText(text);
 	}
 
 }
