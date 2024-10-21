@@ -21,7 +21,7 @@ public class Gui {
 
 		// FlatLaf
 		try {
-			UIManager.setLookAndFeel(new FlatLightLaf());
+			UIManager.setLookAndFeel(new FlatDarkLaf());
 		} catch (Exception ex) {
 			System.err.println("Failed to initialize theme. Using fallback.");
 		}
