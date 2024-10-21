@@ -8,16 +8,16 @@
   <name>TimerApp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  <dependency>
-    <groupId>com.formdev</groupId>
-    <artifactId>flatlaf</artifactId>
-    <version>2.0.1</version>
-  </dependency>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.13.2</version>
+		    <scope>test</scope>
+		</dependency>
+  	<dependency>
+  	  <groupId>com.formdev</groupId>
+  	  <artifactId>flatlaf</artifactId>
+  	  <version>3.2</version>
+  	</dependency>
   </dependencies>
 </project>

@@ -6,6 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+
 public class Gui {
 
 	private JLabel TimeLabel; // Reference to the label
@@ -13,6 +18,14 @@ public class Gui {
 	private JButton stopButton; // Reference to the stop button
 
 	public Gui() {
+
+		// FlatLaf
+		try {
+			UIManager.setLookAndFeel(new FlatLightLaf());
+		} catch (Exception ex) {
+			System.err.println("Failed to initialize theme. Using fallback.");
+		}
+
 		// Set the frame
 		JFrame frame = new JFrame("Timer");
 
